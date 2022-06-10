@@ -1,0 +1,66 @@
+/* FONT SourceSansPro */
+@mixin fl {font-family: 'Montserrat-Light',sans-serif;}
+@mixin fr {font-family: 'Montserrat-Regular',sans-serif;}
+@mixin fm {font-family: 'Montserrat-Medium',sans-serif;}
+@mixin fdb {font-family: 'Montserrat-SemiBold',sans-serif;}
+@mixin fb {font-family: 'Montserrat-Bold',sans-serif;}
+
+/*images*/
+
+@mixin cover {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%; }
+
+  // vertical-align at center
+@mixin vcenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%); }
+
+@mixin r($width) {
+  @media only screen and (max-width: $width+ "px") {
+    @content; } }
+
+@mixin rmin($width) {
+  @media only screen and (min-width: $width+ "px") {
+    @content; } }
+
+//placeholder
+@mixin placeholder {
+  &::-webkit-input-placeholder { @content; }
+  &:-moz-placeholder           { @content; }
+  &::-moz-placeholder          { @content; }
+  &:-ms-input-placeholder      { @content; }
+}
+
+@mixin css-lock($min-size: 1, $max-size: 1.4, $min-width: 20, $max-width: 100, $property: font-size, $unit: px) {
+  #{$property}: #{$max-size}#{$unit};
+  #{$property}: calc(#{$min-size}#{$unit} + (#{$max-size} - #{$min-size}) * ((100vw - #{$min-width}#{$unit}) / (#{$max-width} - #{$min-width})));
+  @media (max-width: #{$min-width}#{$unit}) {
+    #{$property}: #{$min-size}#{$unit}; }
+  @media (min-width: #{$max-width}#{$unit}) {
+    #{$property}: #{$max-size}#{$unit}; } }
+
+
+@mixin placeholder {
+  &::-webkit-input-placeholder { @content; }
+  &:-moz-placeholder           { @content; }
+  &::-moz-placeholder          { @content; }
+  &:-ms-input-placeholder      { @content; }
+}
+
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin hover {
+  @media (any-hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+}
+

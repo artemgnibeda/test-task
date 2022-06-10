@@ -1,0 +1,39 @@
+.input__container {
+  position: relative;
+  input,textarea {
+    height: 40px;
+    font-family: $main-font;
+    width: 100%;
+    background-color: transparent;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid #C4C4C4;
+    margin-bottom: 10px;
+    font-size: 15px;
+    line-height: 150%;
+    &:focus ~ label,
+    &:valid ~ label {
+      opacity: 0;
+    }
+  }
+  textarea {
+    height: 80px;
+    & ~ label {
+      top: 20px;
+    }
+  }
+  label {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-100%) ;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 100%;
+    color: $gray;
+    transition: 0.3s ease-in-out;
+    span {
+      color: $gold;
+    }
+  }
+}

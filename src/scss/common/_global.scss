@@ -1,0 +1,148 @@
+body {
+  font-family: $main-font;
+  font-size: 14px;
+  line-height: 20px;
+  color: $black;
+}
+
+.container {
+  max-width: 1210px;
+  width: 100%;
+  margin: 0 auto;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+*:focus {
+  outline: none !important;
+}
+
+p {
+  font-size: 14px;
+  line-height: 160%;
+}
+
+h1, h2, h3, h4, h4, h6, .h1-title, .h2-title, .h3-title, .h4-title, .h5-title, .h6-title {
+  display: block;
+}
+
+h1, .h1-title {
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 100%;
+  margin-bottom: 20px;
+  @include r(560) {
+    font-weight: 700;
+    font-size: 43px;
+    line-height: 120%;
+  }
+}
+
+h2, .h2-title {
+  font-weight: 700;
+  font-size: 40px;
+  text-transform: uppercase;
+  line-height: 150%;
+  @include r(560) {
+    font-size: 36px;
+  }
+}
+h3, .h3-title {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 39px;
+  text-transform: uppercase;
+  @include r(560) {
+    font-size: 36px;
+    line-height: 120%;
+  }
+}
+h4, .h4-title {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 116%;
+  text-transform: uppercase;
+  @include r(560) {
+    font-size: 24px;
+    line-height: 29px;
+  }
+}
+
+.subtitle_large {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 150%;
+  @include r(560) {
+    font-size: 24px;
+    line-height: 150%;
+  }
+}
+
+.subtitle_middle {
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 150%;
+  @include r(560) {
+    font-size: 26px;
+  }
+}
+
+.subtitle_small {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 160%;
+  text-transform: capitalize;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.with_line {
+  overflow: hidden;
+  text-align: center;
+  span {
+    padding: 0 20px;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    img {
+      margin-right: 11px;
+    }
+    &:after {
+      content: '';
+      right: 0;
+      position: absolute;
+      transform: translateX(100%);
+      top: 50%;
+      width: 100vw;
+      height: 0.5px;
+      background-color: $gold2;
+    }
+    &:before {
+      left: 0;
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 100vw;
+      transform: translateX(-100%);
+      height: 0.5px;
+      background-color: $gold2;
+    }
+  }
+}
+
+.column-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 17px;
+  grid-row-gap: 0px;
+  @include r(560) {
+    display: block;
+  }
+}

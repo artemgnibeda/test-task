@@ -1,0 +1,53 @@
+.contact-section {
+  background-color: $beige;
+  padding: 40px 0;
+}
+
+.contact {
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &__info {
+    max-width: 468px;
+    width: 100%;
+    @include r(1200) {
+      max-width: 400px;
+    }
+    @include r(900) {
+      max-width: 100%;
+      margin-bottom: 30px;
+    }
+    .subtitle_large {
+      margin-bottom: 22px;
+    }
+  }
+  &__content {
+    color: $gray;
+    a {
+      color: $black;
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+    p {
+      margin-bottom: 10px;
+      font-size: 14px;
+      line-height: 160%;
+    }
+  }
+  &__form {
+    max-width: 531px;
+    @include r(1200) {
+      max-width: 450px;
+    }
+    @include r(900) {
+      max-width: 100%;
+    }
+    .btn__submit {
+      margin-top: 22px;
+    }
+  }
+}
